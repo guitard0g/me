@@ -1,0 +1,7 @@
+SRC_DIR=/home/opam/opam-repository/src
+
+eval $(opam env);
+yes | opam init;
+make all -C $SRC_DIR
+rm $SRC_DIR/main.native
+rm $SRC_DIR/main.byte

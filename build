@@ -1,0 +1,3 @@
+#!/bin/bash
+#docker build --tag=ocaml-static .
+docker run -v $(pwd):/home/opam/opam-repository/src:Z --rm -ti ocaml-static
