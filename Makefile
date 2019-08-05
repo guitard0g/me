@@ -7,7 +7,7 @@ OCB = ocamlbuild $(OCB_FLAGS)
 all: native byte # profile debug
 
 clean:
-	$(OCB) -clean
+	$(OCB) -clean && rm ./server
 
 native:
 	$(OCB) main.native

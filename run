@@ -1,5 +1,6 @@
 SRC_DIR=/home/opam/opam-repository/src
 
+make clean -C $SRC_DIR
 eval $(opam env);
 yes | opam init;
 make all -C $SRC_DIR
