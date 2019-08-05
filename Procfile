@@ -1,1 +1,1 @@
-web: ./_build/src/main.native --port=$PORT
+web: ./server --port=$PORT

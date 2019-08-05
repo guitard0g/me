@@ -2,8 +2,8 @@
   "name": "frontend",
   "version": "0.1.0",
   "scripts": {
-    "clean": "bsb -clean-world",
-    "build": "bsb -make-world",
+    "clean": "bsb -clean-world && rm -r static/js/*",
+    "build": "bsb -make-world && mv src/*.bs.js static/js",
     "watch": "bsb -make-world -w"
   },
   "keywords": [

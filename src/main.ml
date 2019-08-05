@@ -24,9 +24,21 @@ let print_person =
     `Json (person |> json_of_person) |> respond'
   end
 
+let index_redirect = 
+  let open Opium.Std in 
+  get "/" begin fun _ ->
+    redirect' (Uri.of_string "/index.html")
+  end 
+
+let static_html = 
+  let open Opium.Std in 
+  Middleware.static ~local_path:"./frontend/static" ~uri_prefix:"/" ()
+
 let _ =
   let open Opium.Std in 
   App.empty
   |> print_param
   |> print_person
+  |> index_redirect
+  |> middleware static_html
   |> App.run_command
