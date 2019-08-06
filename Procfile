@@ -1,1 +1,1 @@
-web: ./server --port=$PORT
+web: $(pwd)/server --port=$PORT

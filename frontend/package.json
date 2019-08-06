@@ -2,8 +2,8 @@
   "name": "frontend",
   "version": "0.1.0",
   "scripts": {
-    "clean": "bsb -clean-world && rm -r static/js/*",
-    "build": "bsb -make-world && mv src/*.bs.js static/js",
+    "clean": "bsb -clean-world && rm -r src/*.bs.js && rm static/bundle.js",
+    "build": "bsb -make-world && browserify src/*.bs.js -o static/bundle.js",
     "watch": "bsb -make-world -w"
   },
   "keywords": [
@@ -14,5 +14,8 @@
   "devDependencies": {
     "bs-platform": "^5.0.6",
     "bucklescript-tea": "^0.11.2"
+  },
+  "dependencies": {
+    "browserify": "^16.3.0"
   }
 }
