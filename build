@@ -1,3 +1,2 @@
 #!/bin/bash
 docker run -v $(pwd):/home/opam/opam-repository/src:Z --rm -ti guitard0g/ocaml-static
-ln -s $(pwd)/_build/src/main.native ./server

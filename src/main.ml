@@ -32,7 +32,7 @@ let index_redirect =
 
 let static_html = 
   let open Opium.Std in 
-  Middleware.static ~local_path:"./frontend/static" ~uri_prefix:"/" ()
+  Middleware.static ~local_path:"./frontend/_build/default" ~uri_prefix:"/" ()
 
 let _ =
   let open Opium.Std in 

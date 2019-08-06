@@ -9,4 +9,4 @@ RUN yes | opam init; yes | eval $(opam env); yes | opam depext ocamlfind ocamlbu
 RUN yes | opam init; yes | eval $(opam env); yes | opam install ocamlfind ocamlbuild opium
 
 # Run it
-CMD ["bash", "/home/opam/opam-repository/src/run"]
+CMD ["bash", "/home/opam/opam-repository/src/setup"]
