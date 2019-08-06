@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "scripts": {
-    "clean": "bsb -clean-world && rm -r src/*.bs.js && rm static/bundle.js",
+    "clean": "bsb -clean-world && rm -rf src/*.bs.js && rm static/bundle.js",
     "build": "bsb -make-world && browserify src/*.bs.js -o static/bundle.js",
     "watch": "bsb -make-world -w"
   },
@@ -12,6 +12,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
     "bs-platform": "^5.0.6",
     "bucklescript-tea": "^0.11.2"
   },
